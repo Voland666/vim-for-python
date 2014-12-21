@@ -9,6 +9,7 @@ filetype plugin indent on
 set foldmethod=indent
 set foldlevel=99
 set number
+set fillchars=stl:\ ,stlnc:\ ,vert:┃
 set laststatus=2
 map <F3> :q<CR>
 map <leader>g :GundoToggle<CR>
