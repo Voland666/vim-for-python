@@ -17,3 +17,14 @@ pip install rope
 cd ~/.vim/bundles/ropevim/
 python setup.py install
 ```
+
+Для установки шрифтов статус-строки необходимо:
+```
+mkdir ~/.fonts
+cp ~/.vim/fonts/PowerlineSymbols.otf ~/.fonts/
+su -
+cp ~/.vim/fonts/10-powerline-symbols.conf /etc/fonts/conf.d/
+fc-cache -vf /home/user/.fonts/
+exit
+~/.vim/fonts/font-master/install.sh
+```

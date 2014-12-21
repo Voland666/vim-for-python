@@ -46,6 +46,3 @@
 [submodule "bundle/ropevim"]
 	path = bundle/ropevim
 	url = https://github.com/python-rope/ropevim.git
-[submodule "bundle/command-t"]
-	path = bundle/command-t
-	url = https://github.com/wincent/Command-T.git

@@ -9,6 +9,7 @@ filetype plugin indent on
 set foldmethod=indent
 set foldlevel=99
 set number
+set laststatus=2
 map <F3> :q<CR>
 map <leader>g :GundoToggle<CR>
 map <leader>n :NERDTreeToggle<CR>
@@ -21,8 +22,6 @@ nmap <silent><Leader>tm <Esc>:Pytest method<CR>
 nmap <silent><Leader>tn <Esc>:Pytest next<CR>
 nmap <silent><Leader>tp <Esc>:Pytest previous<CR>
 nmap <silent><Leader>te <Esc>:Pytest error<CR>
-nmap <leader>a <Esc>:Ack!
-"%{fugitive#statusline()}
 set tildeop "~"
 set completeopt=menuone,longest,preview
 
@@ -33,6 +32,8 @@ let g:miniBufExplMapWindowNavVim = 1
 let g:miniBufExplMapWindowNavArrows = 1 
 let g:miniBufExplMapCTabSwitchBufs = 1 
 let g:miniBufExplModSelTarget = 1 
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
 
 function! SetPythonFile()
 set omnifunc=pythoncomplete#Complete
