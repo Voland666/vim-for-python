@@ -79,12 +79,3 @@ if 'VIRTUAL_ENV' in os.environ:
     activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
     execfile(activate_this, dict(__file__=activate_this))
 EOF
-"BEGIN_DEVASSISTANT_1
-"Setting value devassistant to 0 will use your existing .vimrc file
-"Setting value devassistant to 1 will use the vimrc defined by the devassistant feature
-
-let devassistant=0
-if devassistant==1
- :source /usr/share/devassistant/files/snippets/vim/vimrc
-endif
-"END_DEVASSISTANT_1
