@@ -6,8 +6,17 @@ syntax on
 filetype on
 filetype plugin indent on
 
+set nocompatible
+set backspace=indent,eol,start
+set colorcolumn=80
+set autoindent
+set expandtab
+set smarttab
+set foldcolumn=4
 set foldmethod=indent
 set foldlevel=99
+set smartindent
+set ruler
 set number
 set fillchars=stl:\ ,stlnc:\ ,vert:┃
 set laststatus=2
@@ -26,15 +35,23 @@ nmap <silent><Leader>te <Esc>:Pytest error<CR>
 set tildeop "~"
 set completeopt=menuone,longest,preview
 
-let g:pyflakes_use_quickfix=0
+let g:pyflakes_use_quickfix=1
 let g:pep8_map='<leader>8'
 let g:SuperTabDefaultCompletionType="context"
-let g:miniBufExplMapWindowNavVim = 1 
-let g:miniBufExplMapWindowNavArrows = 1 
-let g:miniBufExplMapCTabSwitchBufs = 1 
-let g:miniBufExplModSelTarget = 1 
+let loaded_minibufexplorer = 0
+"let g:miniBufExplMapWindowNavVim = 1
+"let g:miniBufExplMapWindowNavArrows = 1
+"let g:miniBufExplMapCTabSwitchBufs = 1
+"let g:miniBufExplModSelTarget = 1
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1
+let g:airline#extensions#tabline#buffer_min_count = 2
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_guide_size = 1
+let g:indent_guides_auto_colors = 0
+let g:indent_guides_start_level = 2
+let g:indent_guides_exclude_filetypes = ['help', 'nerdtree']
 
 function! SetPythonFile()
 set omnifunc=pythoncomplete#Complete
@@ -81,3 +98,5 @@ if 'VIRTUAL_ENV' in os.environ:
     activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
     execfile(activate_this, dict(__file__=activate_this))
 EOF
+"colorscheme fu
+colorscheme voland
