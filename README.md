@@ -19,5 +19,5 @@ su -
 cp ~/.vim/fonts/10-powerline-symbols.conf /etc/fonts/conf.d/
 fc-cache -vf /home/user/.fonts/
 exit
-~/.vim/fonts/font-master/install.sh
+~/.vim/fonts/fonts-master/install.sh
 ```
